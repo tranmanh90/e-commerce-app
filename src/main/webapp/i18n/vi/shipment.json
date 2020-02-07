@@ -1,0 +1,25 @@
+{
+  "storeApp": {
+    "shipment": {
+      "home": {
+        "title": "Shipments",
+        "createLabel": "Thêm mới một Shipment",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Shipment",
+        "notFound": "No Shipments found"
+      },
+      "created": "Một Shipment mới được tạo với định danh {{ param }}",
+      "updated": "Một Shipment cập nhật với định danh {{ param }}",
+      "deleted": "Một Shipment đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Shipment {{ id }}?"
+      },
+      "detail": {
+        "title": "Shipment"
+      },
+      "trackingCode": "Tracking Code",
+      "date": "Date",
+      "details": "Details",
+      "invoice": "Invoice"
+    }
+  }
+}

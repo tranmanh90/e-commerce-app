@@ -55,7 +55,7 @@
             "otherEntityName": "productOrder",
             "otherEntityRelationshipName": "invoice",
             "relationshipName": "order",
-            "otherEntityField": "id"
+            "otherEntityField": "code"
         }
     ],
     "changelogDate": "20200207164149",

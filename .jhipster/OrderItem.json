@@ -34,14 +34,14 @@
             "otherEntityName": "product",
             "otherEntityRelationshipName": "orderItem",
             "relationshipName": "product",
-            "otherEntityField": "id"
+            "otherEntityField": "name"
         },
         {
             "relationshipType": "many-to-one",
             "otherEntityName": "productOrder",
             "otherEntityRelationshipName": "orderItem",
             "relationshipName": "order",
-            "otherEntityField": "id"
+            "otherEntityField": "code"
         }
     ],
     "changelogDate": "20200207164148",

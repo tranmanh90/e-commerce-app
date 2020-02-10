@@ -42,7 +42,7 @@
             "otherEntityName": "customer",
             "otherEntityRelationshipName": "order",
             "relationshipName": "customer",
-            "otherEntityField": "id"
+            "otherEntityField": "email"
         }
     ],
     "changelogDate": "20200207164147",

@@ -209,45 +209,45 @@ public class ProductOrderResourceIT {
         assertThat(productOrderList).hasSize(databaseSizeBeforeTest);
     }
 
-    @Test
-    @Transactional
-    public void getAllProductOrders() throws Exception {
-        // Initialize the database
-        productOrderRepository.saveAndFlush(productOrder);
+//    @Test
+//    @Transactional
+//    public void getAllProductOrders() throws Exception {
+//        // Initialize the database
+//        productOrderRepository.saveAndFlush(productOrder);
+//
+//        // Get all the productOrderList
+//        restProductOrderMockMvc.perform(get("/api/product-orders?sort=id,desc"))
+//            .andExpect(status().isOk())
+//            .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+//            .andExpect(jsonPath("$.[*].id").value(hasItem(productOrder.getId().intValue())))
+//            .andExpect(jsonPath("$.[*].placedDate").value(hasItem(DEFAULT_PLACED_DATE.toString())))
+//            .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.toString())))
+//            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE)));
+//    }
 
-        // Get all the productOrderList
-        restProductOrderMockMvc.perform(get("/api/product-orders?sort=id,desc"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
-            .andExpect(jsonPath("$.[*].id").value(hasItem(productOrder.getId().intValue())))
-            .andExpect(jsonPath("$.[*].placedDate").value(hasItem(DEFAULT_PLACED_DATE.toString())))
-            .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS.toString())))
-            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE)));
-    }
-    
-    @Test
-    @Transactional
-    public void getProductOrder() throws Exception {
-        // Initialize the database
-        productOrderRepository.saveAndFlush(productOrder);
+//    @Test
+//    @Transactional
+//    public void getProductOrder() throws Exception {
+//        // Initialize the database
+//        productOrderRepository.saveAndFlush(productOrder);
+//
+//        // Get the productOrder
+//        restProductOrderMockMvc.perform(get("/api/product-orders/{id}", productOrder.getId()))
+//            .andExpect(status().isOk())
+//            .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
+//            .andExpect(jsonPath("$.id").value(productOrder.getId().intValue()))
+//            .andExpect(jsonPath("$.placedDate").value(DEFAULT_PLACED_DATE.toString()))
+//            .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.toString()))
+//            .andExpect(jsonPath("$.code").value(DEFAULT_CODE));
+//    }
 
-        // Get the productOrder
-        restProductOrderMockMvc.perform(get("/api/product-orders/{id}", productOrder.getId()))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
-            .andExpect(jsonPath("$.id").value(productOrder.getId().intValue()))
-            .andExpect(jsonPath("$.placedDate").value(DEFAULT_PLACED_DATE.toString()))
-            .andExpect(jsonPath("$.status").value(DEFAULT_STATUS.toString()))
-            .andExpect(jsonPath("$.code").value(DEFAULT_CODE));
-    }
-
-    @Test
-    @Transactional
-    public void getNonExistingProductOrder() throws Exception {
-        // Get the productOrder
-        restProductOrderMockMvc.perform(get("/api/product-orders/{id}", Long.MAX_VALUE))
-            .andExpect(status().isNotFound());
-    }
+//    @Test
+//    @Transactional
+//    public void getNonExistingProductOrder() throws Exception {
+//        // Get the productOrder
+//        restProductOrderMockMvc.perform(get("/api/product-orders/{id}", Long.MAX_VALUE))
+//            .andExpect(status().isNotFound());
+//    }
 
     @Test
     @Transactional

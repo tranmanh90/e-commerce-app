@@ -33,7 +33,7 @@ node {
 
     stage('frontend tests') {
         try {
-            bat "./gradlew npm_run_test -PnodeInstall --no-daemon --passWithNoTests"
+            bat "./gradlew npm_run_test -PnodeInstall --no-daemon"
         } catch(err) {
             throw err
         } finally {

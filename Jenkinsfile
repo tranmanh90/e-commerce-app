@@ -46,9 +46,9 @@ node {
         archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
     }
 
-    stage('deployment') {
-        bat "./gradlew deployHeroku --no-daemon"
-    }
+//    stage('deployment') {
+//        bat "./gradlew deployHeroku --no-daemon"
+//    }
 
 
     def dockerImage

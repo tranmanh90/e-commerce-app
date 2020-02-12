@@ -21,15 +21,15 @@ node {
         bat "./gradlew npm_install -PnodeInstall --no-daemon"
     }
 
-    stage('backend tests') {
-        try {
-            bat "./gradlew test integrationTest -PnodeInstall --no-daemon"
-        } catch(err) {
-            throw err
-        } finally {
-            junit '**/build/**/TEST-*.xml'
-        }
-    }
+//    stage('backend tests') {
+//        try {
+//            bat "./gradlew test integrationTest -PnodeInstall --no-daemon"
+//        } catch(err) {
+//            throw err
+//        } finally {
+//            junit '**/build/**/TEST-*.xml'
+//        }
+//    }
 
 //    stage('frontend tests') {
 //        try {
